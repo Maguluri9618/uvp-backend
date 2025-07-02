@@ -48,8 +48,14 @@ app.get("/api/users", async (req, res) => {
   }
 });
 
-// Start server
+// ✅ Root route
+app.get("/", (req, res) => {
+  res.send("✅ UVP Backend is live!");
+});
+
+// ✅ Start server
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`🚀 Server running on port ${PORT}`);
 });
+
